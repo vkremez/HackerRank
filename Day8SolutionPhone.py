@@ -38,16 +38,15 @@ harry=12299933
 '''
 
 import sys
-n = int(input())
 dict = {} 
-for x in range(0, n): 
-    name = input().strip() 
-    number = input().strip() 
+for x in range(0, int(raw_input())): 
+    name = raw_input().strip()
+    number = input().strip()
     dict[name] = number 
 
 for name in sys.stdin: 
-    name = name.strip() 
+    name = name.strip()
     if name in dict: 
-        print(name+"="+dict[name]) 
+        print(name+"="+str(dict[name])) 
     else: 
         print("Not found")
